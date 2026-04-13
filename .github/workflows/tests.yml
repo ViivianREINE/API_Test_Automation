@@ -1,0 +1,64 @@
+name: Run API Tests
+
+on: 
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.11', '3.12']
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Cache pip dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run tests with pytest
+      run: |
+        pytest -v --tb=short --html=reports/report.html --self-contained-html
+
+    - name: Run tests with Allure
+      if: always()
+      run: |
+        pytest --alluredir=reports/allure
+
+    - name: Run tests in parallel
+      if: always()
+      run: |
+        pytest -n auto -v
+
+    - name: Upload HTML Report
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: html-report
+        path: reports/report.html
+
+    - name: Test Summary
+      if: always()
+      run: |
+        echo "✅ Test execution completed!"
+        echo "📊 Reports generated in /reports directory"
