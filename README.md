@@ -22,16 +22,16 @@ A **comprehensive, enterprise-grade** API test automation framework built with *
 
 ```
 ╔════════════════════════════════════════════════════════════════════════╗
-║                    WHAT MAKES THIS ELITE?                            ║
+║                    WHAT MAKES THIS ELITE?                              ║
 ╠════════════════════════════════════════════════════════════════════════╣
-║ ✅ 21 TESTS - All passing with 100% success rate                     ║
-║ ✨ 2.2x FASTER - Parallel execution cuts runtime in half             ║
-║ 🎯 PRODUCTION-READY - Multi-environment & CI/CD included             ║
-║ 🔐 ENTERPRISE AUTH - JWT, API Keys, OAuth patterns                   ║
-║ 📊 BEAUTIFUL REPORTS - Dark-theme HTML with live metrics             ║
-║ 🏗️ SCALABLE ARCHITECTURE - Clean MVC-style separation               ║
-║ 📚 COMPREHENSIVE DOCS - 7 documentation files (2300+ lines)          ║
-║ 🚀 ADVANCED TESTING - Schema validation, edge cases, negative tests  ║
+║ ✅ 21 TESTS - All passing with 100% success rate                      ║
+║ ✨ 2.2x FASTER - Parallel execution cuts runtime in half              ║
+║ 🎯 PRODUCTION-READY - Multi-environment & CI/CD included              ║
+║ 🔐 ENTERPRISE AUTH - JWT, API Keys, OAuth patterns                    ║
+║ 📊 BEAUTIFUL REPORTS - Dark-theme HTML with live metrics              ║
+║ 🏗️ SCALABLE ARCHITECTURE - Clean MVC-style separation                 ║
+║ 📚 COMPREHENSIVE DOCS - 7 documentation files (2300+ lines)           ║
+║ 🚀 ADVANCED TESTING - Schema validation, edge cases, negative tests   ║
 ╚════════════════════════════════════════════════════════════════════════╝
 ```
 
@@ -553,8 +553,8 @@ allure serve reports/allure
 │  └────────┬─────────┘        │ • auth_client    │           │
 │           │                  └────────┬─────────┘           │
 │           │                           │                     │
-│           └───────────────┬───────────┘                      │
-│                           ▼                                  │
+│           └───────────────┬───────────┘                     │
+│                           ▼                                 │
 │           ┌───────────────────────────┐                     │
 │           │    API Client Layer       │                     │
 │           │  (api_client.py - 80 loc) │                     │
@@ -588,18 +588,18 @@ allure serve reports/allure
 │                                                             │
 │  ┌───────────────────────────────────────────────────┐     │
 │  │         Advanced Test Features                    │     │
-│  │  ──────────────────────────────────────────────  │     │
-│  │  ✓ Schema Validation (jsonschema)                │     │
-│  │  ✓ Negative Testing (error handling)             │     │
-│  │  ✓ Edge Case Testing (boundaries)                │     │
-│  │  ✓ Data Consistency (cross-request)              │     │
-│  │  ✓ Performance Validation (timing)               │     │
-│  │  ✓ Header Verification (content-type)            │     │
+│  │  ──────────────────────────────────────────────   │     │
+│  │  ✓ Schema Validation (jsonschema)                 │     │
+│  │  ✓ Negative Testing (error handling)              │     │
+│  │  ✓ Edge Case Testing (boundaries)                 │     │
+│  │  ✓ Data Consistency (cross-request)               │     │
+│  │  ✓ Performance Validation (timing)                │     │
+│  │  ✓ Header Verification (content-type)             │     │
 │  └───────────────────────────────────────────────────┘     │
-│                                                             │
+│                                                            │
 │  ┌───────────────────────────────────────────────────┐     │
 │  │       Reporting & CI/CD Infrastructure            │     │
-│  │  ──────────────────────────────────────────────  │     │
+│  │  ──────────────────────────────────────────────   │     │
 │  │  ✓ HTML Reports (pytest-html + dark theme)       │     │
 │  │  ✓ Allure Reports (timeline + history)           │     │
 │  │  ✓ GitHub Actions (multi-version CI/CD)          │     │
