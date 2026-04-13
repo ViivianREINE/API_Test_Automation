@@ -1,0 +1,107 @@
+# ============================================================================
+# API Test Automation Framework - .gitignore
+# ============================================================================
+
+# ----------------------
+# Python cache files
+# ----------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+dist/
+build/
+
+# ----------------------
+# Virtual environments
+# ----------------------
+venv/
+.venv/
+env/
+ENV/
+.env.local
+
+# ----------------------
+# Pytest cache & coverage
+# ----------------------
+.pytest_cache/
+.coverage
+htmlcov/
+.cache
+
+# ----------------------
+# Test reports (generated - DO NOT COMMIT)
+# ----------------------
+reports/
+allure-results/
+allure-report/
+*.html
+!README.md
+
+# ----------------------
+# Logs
+# ----------------------
+*.log
+logs/
+
+# ----------------------
+# Environment variables (secrets - DO NOT COMMIT)
+# ----------------------
+.env
+
+# ----------------------
+# IDE / Editor files
+# ----------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.editorconfig
+
+# ----------------------
+# OS files
+# ----------------------
+.DS_Store
+Thumbs.db
+.Thumbs.db
+
+# ----------------------
+# Temporary & backup files
+# ----------------------
+*.tmp
+*.bak
+*.backup
+*~
+
+# ----------------------
+# System files
+# ----------------------
+.AppleDouble
+.LSOverride
+._*
+
+# ============================================================================
+# IMPORTANT: These files SHOULD be committed to git
+# ============================================================================
+# ✅ tests/                    - Test files (all test cases)
+# ✅ utils/                    - Framework utilities (api_client, config, logger)
+# ✅ data/                     - Test data files (test_data.json)
+# ✅ .github/workflows/        - GitHub Actions CI/CD pipeline
+# ✅ conftest.py              - Pytest fixtures and configuration
+# ✅ pytest.ini               - Pytest configuration with markers
+# ✅ requirements.txt         - Python dependencies
+# ✅ .env.example             - Environment variables template
+# ✅ README.md                - Main documentation
+# ✅ QUICKSTART.md            - Quick start guide
+# ✅ FEATURES.md              - Feature showcase
+# ✅ AUTHENTICATION_GUIDE.md  - Authentication patterns
+# ✅ PYTEST_REFERENCE.md      - Pytest command reference
+# ✅ CONTRIBUTING.md          - Contribution guidelines
+# ✅ INDEX.md                 - Documentation index
+# ✅ GITHUB_PROFILE.md        - GitHub profile content
+# ✅ LICENSE                  - Project license
+# ============================================================================
